@@ -1,4 +1,4 @@
--- Revisa Paquetes descompilados en TC
+-- Revisa Objetos descompilados en TC
 
 SELECT DISTINCT ('ALTER '||TYPE||' '||OWNER||'.'||NAME||' COMPILE;') OBJETO
 --SELECT DISTINCT (TYPE||' '||OWNER||'.'||NAME) OBJETO
