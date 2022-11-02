@@ -1,6 +1,8 @@
 -- :UOrigen :=  'LESTERM_GD';
 -- :UDestino := 'MARTAA_QJ';
 
+select * from dba_users where username in (:UOrigen,:UDestino);
+
 select 'ALTER USER ' || :UDestino || ' identified by "PROMERICA.2022" ACCOUNT UNLOCK PASSWORD EXPIRE PROFILE ' || PROFILE || ';' from dba_users where username = :UOrigen;
 
 select 'GRANT ' || PRIVILEGE || ' to ' || :UDestino || ';'  from dba_sys_privs where grantee = :UOrigen;
