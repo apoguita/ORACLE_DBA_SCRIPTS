@@ -20,6 +20,8 @@ and owner||'.'||object_name not in
 'TRADING.ONTR_MASSIVE_LOAD');        
 
 
+-- OLD Script
+
 -- revisa objetos descompilados en CBS
 
 select
