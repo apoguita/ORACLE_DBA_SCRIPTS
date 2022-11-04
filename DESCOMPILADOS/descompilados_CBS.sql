@@ -1,3 +1,25 @@
+select
+   'ALTER ' || OBJECT_TYPE || ' ' ||
+   OWNER || '.' || OBJECT_NAME || ' COMPILE;'
+from
+   dba_objects
+where
+   status = 'INVALID'
+and
+   object_type in ('PACKAGE','PACKAGE BODY','FUNCTION','PROCEDURE')
+and owner not in('SYS','SYSTEM','WMSYS','BOCBS','DATUM','SYSMAN')
+and owner||'.'||object_name not in
+('GE.GE_INTERFAZ_APLICACION',            
+'PA.PA_INT_GE_AGREGAGESTION',        
+'SE.INFERDBUSER2',       
+'SE.SE_SECURITYQUERIES_PKG',              
+'SE.SE_INTERFASE_GN_REQUEST_PKG', 
+'SE.SE_INTERFACE_GN_RESPONSE_PKG',             
+'SE.SE_INTERFACE_GN_REQUEST_PKG', 
+'SE.SE_INTERFACE_CS_RESPONSE_PKG',
+'TRADING.ONTR_MASSIVE_LOAD');        
+
+
 -- revisa objetos descompilados en CBS
 
 select
