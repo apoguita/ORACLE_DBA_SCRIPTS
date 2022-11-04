@@ -1,3 +1,6 @@
+
+
+-- Query original revisaba la DBA_ERRORS
 -- Revisa Objetos descompilados en TC
 
 SELECT DISTINCT ('ALTER '||TYPE||' '||OWNER||'.'||NAME||' COMPILE;') OBJETO
