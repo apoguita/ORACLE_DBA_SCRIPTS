@@ -1,6 +1,6 @@
 select * from dba_users where username in (:UOrigen,:UDestino);
 
-select 'CREATE USER ' || :UDestino || ' identified by "PROMERICA.2022" ACCOUNT UNLOCK PASSWORD EXPIRE PROFILE ' || PROFILE || ';' from dba_users where username = :UOrigen
+select 'CREATE USER ' || :UDestino || ' identified by "PROMERICA.2023$" ACCOUNT UNLOCK PASSWORD EXPIRE PROFILE ' || PROFILE || ';' from dba_users where username = :UOrigen
 UNION
 select 'GRANT ' || PRIVILEGE || ' to ' || :UDestino || ';'  from dba_sys_privs where grantee = :UOrigen
 UNION
