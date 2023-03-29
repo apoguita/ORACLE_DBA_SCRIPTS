@@ -6,6 +6,6 @@ select 'ALTER USER ' || :UDestino || ' identified by "PROMERICA.2023$" ACCOUNT U
 /*
 se desbloqueó y cambio contraseña al usuario, deberá cambiar contraseña en el siguiente logueo
 
-contraseña: PROMERICA.2023$
+contraseña: Promerica.2023$$
 
 */
