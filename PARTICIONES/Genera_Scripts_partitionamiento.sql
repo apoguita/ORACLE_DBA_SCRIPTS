@@ -1,5 +1,6 @@
 /* GENERA LOS SCRIPTS PARA PARTICIONES*/
 /* SE NECEISTA ENCENDER EL DMBS_OUTPUT */
+/* CAMBIAR EL MES!! */
 
 select  
 'exec ADMINDB.crea_particiones(''' || TABLE_OWNER || ''',''' || TABLE_NAME || ''',''' || TABLESPACE_PREFIX || ''',''MAR23'',''' || PARTITION_TYPE || ''',''' || TABLESPACE_TYPE || ''');'
