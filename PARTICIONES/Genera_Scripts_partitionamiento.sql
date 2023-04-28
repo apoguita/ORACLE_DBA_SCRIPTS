@@ -3,13 +3,17 @@
 /* CAMBIAR EL MES!! */
 
 select  
-'exec ADMINDB.crea_particiones(''' || TABLE_OWNER || ''',''' || TABLE_NAME || ''',''' || TABLESPACE_PREFIX || ''',''MAR23'',''' || PARTITION_TYPE || ''',''' || TABLESPACE_TYPE || ''');'
+'exec ADMINDB.crea_particiones(''' || TABLE_OWNER || ''',''' || TABLE_NAME || ''',''' || TABLESPACE_PREFIX || ''',''MAY23'',''' || PARTITION_TYPE || ''',''' || TABLESPACE_TYPE || ''');'
 from ADMINDB.PARTITION_INFO
 
-
-
+/*
+select count(*) from dba_tablespaces where upper(tablespace_name) = 'BO_CBR_DAT_2023'
+CCLR_BIT_REDUCIDO
+*/
 
 /* errores en TC */
+/*
+
 
 BO_CBR_DAT_2023
 BO_CBU_DAT_2023
@@ -25,10 +29,14 @@ PT_PCH_DAT_2023
 TC_TCH_DAT_2023
 --BO.CM_LIQUIDACION_DETALLE
 
+
 CBS
-CC.CC_ESTADO_CUENTA_MASIVO_DETA
-PR.PR_MOVIMIENTOS
-CC_DAT_CECM_ABR23
-CC.CC_ESTADO_CUENTA_CKIMAGEN
-WC_WPT_DAT_ABR23
-CC_DAT_CECM_ABR23
+--resueltos todos errores
+--FALTA INCLUIR PR_MOVIMIENTOS que lleva en 2028
+
+estas dos tablas truenen por tipo particionamiento, hay que revisar si se crean solas , siempre aparecen
+
+cc_estado_cuenta_masivo_deta
+cc_estado_cuenta_ckimagen
+
+*/
