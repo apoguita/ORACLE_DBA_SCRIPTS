@@ -7,7 +7,7 @@ srvctl stop database -d cbsbpgt -o immediate
 
 --iniciar servicio Dblink
 
-srvctl start service -db cbsbpgt -service cbsbpg_dbl
+srvctl start service -d cbsbpgt -s cbsbpg_dbl
 
 TC:
 srvctl stop service -d tcbpgt
