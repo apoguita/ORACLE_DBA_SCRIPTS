@@ -14,3 +14,9 @@ Both scripts must be run as the SYS user, or another user with SYSDBA, to work c
 *?
 
 start $ORACLE_HOME/rdbms/admin/utlrp.sql
+
+DECLARE
+    threads   PLS_INTEGER := 0;
+BEGIN
+    UTL_RECOMP.recomp_parallel (threads);
+END;
