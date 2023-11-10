@@ -1,3 +1,7 @@
+srvctl config database
+  (devuelve listado de targets para -d)
+servctl status database -d XXXXX
+
 CBS:
 srvctl stop database -d cbsbpgt
 srvctl status database -d cbsbpgt
